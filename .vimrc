@@ -57,10 +57,13 @@ vmap <Leader>P "+P
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-nnoremap <Leader>ev :split $MYVIMRC<CR>
-nnoremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <Leader>ve :split $MYVIMRC<CR>
+nnoremap <Leader>so :source %<CR>
 
-nnoremap <Leader><Tab><Tab> m1gg=G`1
+nnoremap <Leader>br :edit<CR>
+nnoremap <Leader>bR :edit!<CR>
+
+nnoremap <Leader>==  m1gg=G`1
 
 set autoread
 set tabstop=4
@@ -103,6 +106,10 @@ nnoremap <S-k> 10k
 nnoremap B ^
 nnoremap E $
 
+nnoremap <Tab> m1v>`14l
+nnoremap <S-Tab> m1v<`14h
+vnoremap <Tab> m1>`14lgv
+vnoremap <S-Tab> m1<`14hgv
 
 " Easily move lines up or down in all modes
 "nnoremap <S-j> :m .+1<CR>==
